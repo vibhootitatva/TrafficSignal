@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sideDButton: UILabel!
     var counter : Int! = 5
     var defaultCounter : Int! = 5
+    var valueambulance :Int! = 10
     var timer : Timer?
     
     override func viewDidLoad() {
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
         sideCButton.backgroundColor = UIColor.red
         sideDButton.backgroundColor = UIColor.red
         sideAButton.backgroundColor = UIColor.green
-        counter = 10
+        counter = valueambulance
         timer?.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(signal), userInfo: nil, repeats: true)
     }
@@ -54,7 +55,7 @@ class ViewController: UIViewController {
         sideBButton.backgroundColor = UIColor.red
         sideCButton.backgroundColor = UIColor.red
         sideDButton.backgroundColor = UIColor.red
-        counter = 10
+        counter = valueambulance
         
         timer?.invalidate()
         sideCButton.backgroundColor = UIColor.green
@@ -66,7 +67,7 @@ class ViewController: UIViewController {
         sideCButton.backgroundColor = UIColor.red
         sideAButton.backgroundColor = UIColor.red
         
-        counter = 10
+        counter = valueambulance
         
         timer?.invalidate()
         sideDButton.backgroundColor = UIColor.green
@@ -79,7 +80,7 @@ class ViewController: UIViewController {
         sideCButton.backgroundColor = UIColor.red
         sideDButton.backgroundColor = UIColor.red
         sideBButton.backgroundColor = UIColor.green
-        counter = 10
+        counter = valueambulance
         
         timer?.invalidate()
         
@@ -101,7 +102,7 @@ class ViewController: UIViewController {
                 sideAButton.backgroundColor = UIColor.red
                 sideBButton.backgroundColor = UIColor.green
                 counter = defaultCounter
-                sideALabel.text = "\(counter ?? 5)"
+                sideALabel.text = "\(defaultCounter ?? 5)"
                 timer?.invalidate()
                 timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(signal), userInfo: nil, repeats: true)
                 
@@ -117,7 +118,7 @@ class ViewController: UIViewController {
                 sideBButton.backgroundColor = UIColor.red
                 sideCButton.backgroundColor = UIColor.green
                 counter = defaultCounter
-                sideALabel.text = "\(defaultCounter ?? 5)"
+                sideBLabel.text = "\(defaultCounter ?? 5)"
                 timer?.invalidate()
                 timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(signal), userInfo: nil, repeats: true)
             }
@@ -131,7 +132,7 @@ class ViewController: UIViewController {
                 sideCButton.backgroundColor = UIColor.red
                 sideDButton.backgroundColor = UIColor.green
                 counter = defaultCounter
-                sideBLabel.text = "\(defaultCounter ?? 5)"
+                sideCLabel.text = "\(defaultCounter ?? 5)"
                 timer?.invalidate()
                 timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(signal), userInfo: nil, repeats: true)
                 
@@ -145,7 +146,7 @@ class ViewController: UIViewController {
                 sideDButton.backgroundColor = UIColor.red
                 sideAButton.backgroundColor = UIColor.green
                 counter = defaultCounter
-                sideCLabel.text = "\(defaultCounter ?? 5)"
+                sideDLabel.text = "\(defaultCounter ?? 5)"
                 timer?.invalidate()
                 timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(signal), userInfo: nil, repeats: true)
                 

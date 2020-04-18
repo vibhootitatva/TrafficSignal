@@ -11,6 +11,7 @@ import UIKit
 class SecondViewController: UIViewController {
     @IBOutlet weak var counterValueTextField: UITextField!
     
+    @IBOutlet weak var ambulanceTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,14 +24,17 @@ class SecondViewController: UIViewController {
     }
     @IBAction func didTapOnClockwise(_ sender: Any) {
         let counter = Int(counterValueTextField.text ?? "0")
-        if(counter! < 5 || counter! > 120) {
-            self.alert(message: "Please Enter value between 4 and 121")
+        let value = Int(ambulanceTextField.text ?? "0")
+        if((counter! < 5 || counter! > 120) && (value! < 10 || value! > 300)) {
+            self.alert(message: "Please enter the counter value between 4 and 121 and ambulance value between 9 and 301")
+            
         }
             //        if(counterValueTextField.text?.count == 0) {
             //            self.alert(message: "Please Enter the Value")
         else {
             if let vc = self.navigationController?.viewControllers.first as? ViewController {
                 vc.defaultCounter = Int(counterValueTextField.text ?? "5")
+                vc.valueambulance = Int(ambulanceTextField.text ?? "10")
             }
             self.navigationController?.popViewController(animated: true)
             //        }
@@ -40,55 +44,61 @@ class SecondViewController: UIViewController {
     
     @IBAction func didTapOnAntiClockwise(_ sender: Any) {
         let counter = Int(counterValueTextField.text ?? "0")
-               if(counter! < 5 || counter! > 120) {
-                   self.alert(message: "Please Enter value between 4 and 121")
-               }
-                   //        if(counterValueTextField.text?.count == 0) {
-                   //            self.alert(message: "Please Enter the Value")
-               else {
-                   if let vc = self.navigationController?.viewControllers.first as? ViewController {
-                       vc.defaultCounter = Int(counterValueTextField.text ?? "5")
-                   }
-                   self.navigationController?.popViewController(animated: true)
-                   //        }
-                   
-               }
-           }
+        let value = Int(ambulanceTextField.text ?? "0")
+        if((counter! < 5 || counter! > 120) && (value! < 10 || value! > 300)) {
+            self.alert(message: "Please enter the counter value between 4 and 121 and ambulance value between 9 and 301")
+        }
+            
+            //        if(counterValueTextField.text?.count == 0) {
+            //            self.alert(message: "Please Enter the Value")
+        else {
+            if let vc = self.navigationController?.viewControllers.first as? ViewController {
+                vc.defaultCounter = Int(counterValueTextField.text ?? "5")
+                 vc.valueambulance = Int(ambulanceTextField.text ?? "10")
+            }
+            self.navigationController?.popViewController(animated: true)
+            //        }
+            
+        }
+    }
     
-
+    
     
     @IBAction func didTapOnLeftToRight(_ sender: Any) {
         let counter = Int(counterValueTextField.text ?? "0")
-                     if(counter! < 5 || counter! > 120) {
-                         self.alert(message: "Please Enter value between 4 and 121")
-                     }
-                         //        if(counterValueTextField.text?.count == 0) {
-                         //            self.alert(message: "Please Enter the Value")
-                     else {
-                         if let vc = self.navigationController?.viewControllers.first as? ViewController {
-                             vc.defaultCounter = Int(counterValueTextField.text ?? "5")
-                         }
-                         self.navigationController?.popViewController(animated: true)
-                         //        }
-                         
-                     }
+        let value = Int(ambulanceTextField.text ?? "0")
+        if((counter! < 5 || counter! > 120) && (value! < 10 || value! > 300)) {
+            self.alert(message: "Please enter the counter value between 4 and 121 and ambulance value between 9 and 301")
+        }
+            //        if(counterValueTextField.text?.count == 0) {
+            //            self.alert(message: "Please Enter the Value")
+        else {
+            if let vc = self.navigationController?.viewControllers.first as? ViewController {
+                vc.defaultCounter = Int(counterValueTextField.text ?? "5")
+                 vc.valueambulance = Int(ambulanceTextField.text ?? "10")
+            }
+            self.navigationController?.popViewController(animated: true)
+            //        }
+            
+        }
     }
     
     @IBAction func didTapOnRightLeft(_ sender: Any) {
-       let counter = Int(counterValueTextField.text ?? "0")
-                    if(counter! < 5 || counter! > 120) {
-                        self.alert(message: "Please Enter value between 4 and 121")
-                    }
-                        //        if(counterValueTextField.text?.count == 0) {
-                        //            self.alert(message: "Please Enter the Value")
-                    else {
-                        if let vc = self.navigationController?.viewControllers.first as? ViewController {
-                            vc.defaultCounter = Int(counterValueTextField.text ?? "5")
-                        }
-                        self.navigationController?.popViewController(animated: true)
-                        //        }
-                        
-                    }
+        let counter = Int(counterValueTextField.text ?? "0")
+        let value = Int(ambulanceTextField.text ?? "0")
+        if((counter! < 5 || counter! > 120) && (value! < 10 || value! > 300)) {
+            self.alert(message: "Please enter the counter value between 4 and 121 and ambulance value between 9 and 301")
+        }//        if(counterValueTextField.text?.count == 0) {
+            //            self.alert(message: "Please Enter the Value")
+        else {
+            if let vc = self.navigationController?.viewControllers.first as? ViewController {
+                vc.defaultCounter = Int(counterValueTextField.text ?? "5")
+                 vc.valueambulance = Int(ambulanceTextField.text ?? "10")
+            }
+            self.navigationController?.popViewController(animated: true)
+            //        }
+            
+        }
         
     }
     /*
