@@ -22,18 +22,22 @@ class SecondViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     @IBAction func didTapOnClockwise(_ sender: Any) {
-        if(counterValueTextField.text?.count == 0) {
-            self.alert(message: "Please Enter the Value")
-            let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            
-        }
+        let counter = Int(counterValueTextField.text ?? "0")
+//        if(counterValueTextField.text?.count == 0) {
+//            self.alert(message: "Please Enter the Value")
+            if let vc = self.navigationController?.viewControllers.first as? ViewController {
+                vc.defaultCounter = Int(counterValueTextField.text ?? "5")
+            }
+            self.navigationController?.popViewController(animated: true)
+//        }
         
     }
     
     @IBAction func didTapOnAntiClockwise(_ sender: Any) {
         if(counterValueTextField.text?.count == 0) {
                    self.alert(message: "Please Enter the Value")
-                   let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                   let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewController") as! ViewController
+            self.navigationController?.popViewController(animated: true)
                    
                }
               
@@ -42,7 +46,9 @@ class SecondViewController: UIViewController {
     @IBAction func didTapOnLeftToRight(_ sender: Any) {
         if(counterValueTextField.text?.count == 0) {
                    self.alert(message: "Please Enter the Value")
-                   let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                   let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewController") as! ViewController
+            self.navigationController?.popViewController(animated: true)
+            
                    
                }
               
@@ -52,7 +58,7 @@ class SecondViewController: UIViewController {
         if(counterValueTextField.text?.count == 0) {
                    self.alert(message: "Please Enter the Value")
                    let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
-                   
+            self.navigationController?.popViewController(animated: true)
                }
               
     }
