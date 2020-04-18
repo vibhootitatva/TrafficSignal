@@ -99,11 +99,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHx-1i-x8n">
-                                <rect key="frame" x="298" y="66" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -136,6 +131,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="sideAButton" destination="v7E-sJ-NGE" id="aTW-8d-c6N"/>
+                        <outlet property="sideALabel" destination="Xja-xi-y8a" id="deL-We-Lka"/>
+                        <outlet property="sideBButton" destination="SR1-8S-rfL" id="Pcc-Y2-Qds"/>
+                        <outlet property="sideBLabel" destination="8OG-Le-lr6" id="gFh-2R-rpN"/>
+                        <outlet property="sideCButton" destination="IC9-uI-Huz" id="e0A-w7-BZY"/>
+                        <outlet property="sideCLabel" destination="2Bs-p8-CP7" id="D8L-A9-GTD"/>
+                        <outlet property="sideDButton" destination="A96-Yg-RD8" id="51y-Wu-2DZ"/>
+                        <outlet property="sideDLabel" destination="A96-Yg-RD8" id="Nkj-BF-hq0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
