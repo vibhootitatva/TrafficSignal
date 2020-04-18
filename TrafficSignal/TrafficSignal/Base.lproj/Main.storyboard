@@ -112,11 +112,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KL9-ve-zL9">
-                                <rect key="frame" x="348" y="108" width="46" height="30"/>
+                                <rect key="frame" x="345" y="108" width="49" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7yE-bd-sMm"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Setting"/>
                                 <connections>
                                     <action selector="didTapOnSetting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKZ-Kj-FUL"/>
                                 </connections>

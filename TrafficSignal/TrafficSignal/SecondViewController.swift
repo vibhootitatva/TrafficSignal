@@ -13,7 +13,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     func alert(message:String){
@@ -23,53 +23,82 @@ class SecondViewController: UIViewController {
     }
     @IBAction func didTapOnClockwise(_ sender: Any) {
         let counter = Int(counterValueTextField.text ?? "0")
-//        if(counterValueTextField.text?.count == 0) {
-//            self.alert(message: "Please Enter the Value")
+        if(counter! < 5 || counter! > 120) {
+            self.alert(message: "Please Enter value between 4 and 121")
+        }
+            //        if(counterValueTextField.text?.count == 0) {
+            //            self.alert(message: "Please Enter the Value")
+        else {
             if let vc = self.navigationController?.viewControllers.first as? ViewController {
                 vc.defaultCounter = Int(counterValueTextField.text ?? "5")
             }
             self.navigationController?.popViewController(animated: true)
-//        }
-        
+            //        }
+            
+        }
     }
     
     @IBAction func didTapOnAntiClockwise(_ sender: Any) {
-        if(counterValueTextField.text?.count == 0) {
-                   self.alert(message: "Please Enter the Value")
-                   let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewController") as! ViewController
-            self.navigationController?.popViewController(animated: true)
+        let counter = Int(counterValueTextField.text ?? "0")
+               if(counter! < 5 || counter! > 120) {
+                   self.alert(message: "Please Enter value between 4 and 121")
+               }
+                   //        if(counterValueTextField.text?.count == 0) {
+                   //            self.alert(message: "Please Enter the Value")
+               else {
+                   if let vc = self.navigationController?.viewControllers.first as? ViewController {
+                       vc.defaultCounter = Int(counterValueTextField.text ?? "5")
+                   }
+                   self.navigationController?.popViewController(animated: true)
+                   //        }
                    
                }
-              
-    }
+           }
+    
+
     
     @IBAction func didTapOnLeftToRight(_ sender: Any) {
-        if(counterValueTextField.text?.count == 0) {
-                   self.alert(message: "Please Enter the Value")
-                   let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewController") as! ViewController
-            self.navigationController?.popViewController(animated: true)
-            
-                   
-               }
-              
+        let counter = Int(counterValueTextField.text ?? "0")
+                     if(counter! < 5 || counter! > 120) {
+                         self.alert(message: "Please Enter value between 4 and 121")
+                     }
+                         //        if(counterValueTextField.text?.count == 0) {
+                         //            self.alert(message: "Please Enter the Value")
+                     else {
+                         if let vc = self.navigationController?.viewControllers.first as? ViewController {
+                             vc.defaultCounter = Int(counterValueTextField.text ?? "5")
+                         }
+                         self.navigationController?.popViewController(animated: true)
+                         //        }
+                         
+                     }
     }
     
     @IBAction func didTapOnRightLeft(_ sender: Any) {
-        if(counterValueTextField.text?.count == 0) {
-                   self.alert(message: "Please Enter the Value")
-                   let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            self.navigationController?.popViewController(animated: true)
-               }
-              
+       let counter = Int(counterValueTextField.text ?? "0")
+                    if(counter! < 5 || counter! > 120) {
+                        self.alert(message: "Please Enter value between 4 and 121")
+                    }
+                        //        if(counterValueTextField.text?.count == 0) {
+                        //            self.alert(message: "Please Enter the Value")
+                    else {
+                        if let vc = self.navigationController?.viewControllers.first as? ViewController {
+                            vc.defaultCounter = Int(counterValueTextField.text ?? "5")
+                        }
+                        self.navigationController?.popViewController(animated: true)
+                        //        }
+                        
+                    }
+        
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
